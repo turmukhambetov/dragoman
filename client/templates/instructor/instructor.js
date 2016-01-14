@@ -20,8 +20,21 @@ Template.instructorCreate.helpers({
             // Inform the user that account creation failed
           } 
 
+//Fill Instructor's profile with all necessary details: photo, address, etc.function
+//Send activation email to administrator 
+// Edit expertise
+
         });
 
       return false;
     }
+  ,	'click #btn-login' : function(e,t) {
+  		e.preventDefault();
+  		var email = t.find('#login-username').value
+        , password = t.find('#login-password').value;
+
+
+        Meteor.loginWithPassword(email,password);
+  	}
   });
+
