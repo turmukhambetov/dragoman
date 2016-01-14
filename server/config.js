@@ -1,3 +1,5 @@
+/*
+if (Meteor.isServer) {
 Accounts.onCreateUser(function(options, user) {
     if(!options || !user) {
       console.log('error creating user');
@@ -10,4 +12,10 @@ Accounts.onCreateUser(function(options, user) {
   // ...
   
   return user;
+//..сщтыщдуюдщп(гыук)ж
+console.log(user);
+
+
+
 });
+};*/
