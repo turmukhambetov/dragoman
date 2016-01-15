@@ -18,12 +18,13 @@ Template.instructorCreate.helpers({
           if (err) {
             throw(err);
             // Inform the user that account creation failed
-          } 
-
-//Fill Instructor's profile with all necessary details: photo, address, etc.function
-//Send activation email to administrator 
-// Edit expertise
-
+          } else {
+            if (!Session.get("verbatim")) {
+              Router.go('homeIndex');
+            } else {
+              Router.go('expertiseNew');
+            }
+          }
         });
 
       return false;
@@ -34,7 +35,14 @@ Template.instructorCreate.helpers({
         , password = t.find('#login-password').value;
 
 
-        Meteor.loginWithPassword(email,password);
+        Meteor.loginWithPassword(email,password,function(){
+          if(!Session.get("verbatim")) {
+            Router.go('homeIndex');
+            } else {
+              Router.go('expertiseNew');
+            }
+
+        });
   	}
   });
 

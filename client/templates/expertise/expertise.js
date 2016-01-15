@@ -1,7 +1,9 @@
-Template.expertiseEdit.helpers({
-	list : Courses
+Template.expertiseNew.helpers({
+	courseVerbatim: function () {
+    return Session.get("verbatim");
+  }
+})
 
-});
 
 
 Template.expertiseNew.events({
@@ -18,9 +20,11 @@ Session.set({
 
 	} else {
 		console.log('Update user collection');
-		Router.go('expertiseEdit')	
+			
 	}
 	
 }
 });
+
+
 
