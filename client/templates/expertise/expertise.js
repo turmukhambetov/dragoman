@@ -6,7 +6,9 @@ Template.expertiseNew.helpers({
 
 });
 
-
+Template.expertiseNew.onDestroyed(function(){
+Session.set({verbatim : null});
+});
 
 Template.expertiseNew.events({
 'click .btn': function (event, template) {
@@ -42,7 +44,8 @@ Session.set({	verbatim : verbatim });
 				if (error) {throw error;}
 				else {
 					
-					console.log(result);
+					Router.go('/');
+					
 					
 				}
 			});

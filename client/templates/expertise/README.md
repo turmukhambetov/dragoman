@@ -10,3 +10,4 @@ Still to do:
 1. Define user schema, so that *courses* nested collection is an array.
 2. Data security
 3. Routing after all is done
+4. Check, trim all inputs
