@@ -1,0 +1,16 @@
+<template name="listCourse">
+
+{{#autoForm collection="Meteor.users" doc=currentUser id="insertuser" type="update"}}
+
+<fieldset>
+      <legend>Update Instructor</legend>
+      {{> afQuickField name='verbatim'}}
+      {{> afQuickField name='subject'}}
+      {{> afQuickField name='target'}}
+      {{> afQuickField name='product'}}
+      
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Insert</button>
+{{/autoForm}}
+
+</template>

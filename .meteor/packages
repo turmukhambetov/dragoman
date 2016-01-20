@@ -25,3 +25,6 @@ iron:router
 alanning:roles
 autopublish
 fortawesome:fontawesome
+aldeed:simple-schema
+aldeed:collection2
+aldeed:autoform
