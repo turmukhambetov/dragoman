@@ -1,16 +1,25 @@
 <template name="listCourse">
+<ul>
+{{#each courses}}
+<li>{{> itemCourse}}</li>
+{{/each}}
+</ul>
+</template>
 
-{{#autoForm collection="Meteor.users" doc=currentUser id="insertuser" type="update"}}
+<template name="itemCourse">
+<div class="course">
+<div class="courseitem">
+<h3>{{verbatim}} {{subject}} {{product}}</h3>
+{{>itemProduct pid=product}}
+</div>
+</div>
 
-<fieldset>
-      <legend>Update Instructor</legend>
-      {{> afQuickField name='verbatim'}}
-      {{> afQuickField name='subject'}}
-      {{> afQuickField name='target'}}
-      {{> afQuickField name='product'}}
-      
-    </fieldset>
-    <button type="submit" class="btn btn-primary">Insert</button>
-{{/autoForm}}
+</template>
+
+<template name="itemProduct">
+	<div class="product">
+	{{products.duration}}
+	</div>
+
 
 </template>

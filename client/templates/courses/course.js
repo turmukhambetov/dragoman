@@ -57,5 +57,9 @@ Template.createCourse.events({
 	} // click .btn
 }); // events
 
-
+Template.itemProduct.helpers({
+	products: function(pid){
+		return products.findOne({_id: pid});
+	}
+});
 

@@ -28,3 +28,8 @@ fortawesome:fontawesome
 aldeed:simple-schema
 aldeed:collection2
 aldeed:autoform
+rajit:bootstrap3-datepicker
+aldeed:autoform-bs-datepicker
+dhtmlx:scheduler
+dhtmlx:scheduler-data
+rzymek:fullcalendar
