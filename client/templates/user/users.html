@@ -138,3 +138,11 @@
          </div> 
     </div>
 </template>
+
+<template name="editProfile1">
+<!--{{> quickForm id="editprofile" type="update" schema="UserProfile" doc=Meteor.userId()}} -->
+</template>
+
+<template name="editProfile">
+    {{> quickForm collection="Meteor.users" type="update" id="editpro" doc=currentUser}}
+    </template>

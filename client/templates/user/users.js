@@ -33,7 +33,7 @@ Template.createUser.helpers({
             firstname: firstname,
             lastname: lastname
           };
-          Meteor.call('createProfile',profile,function(error,result){
+          Meteor.call('createProfile',profile, Meteor.userId(),function(error,result){
             if (error) {throw error}
               else {
                 if (!Session.get("verbatim")) {
@@ -81,4 +81,7 @@ Template.createUser.helpers({
         });
   	}
   });
+
+
+
 
